@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="Clément Lazzarini">
+
+  <title>Relax'Sens - À propos</title>
+  <meta name="description" content="Relax'Sens - Institut de beauté Digoin - À propos">
+  <link rel="icon" href="img/makeup-pouch.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar dark-mode" role="navigation">
+          <a href="index.html"  class="navbar__logo"><div></div>  </a>  
+            <ul class="navbar__links">
+              <li class="navbar__link first"><a href="index.html">Accueil</a></li>
+              <li class="navbar__link second"><a href="nos_marques.html">Nos marques</a></li>
+              <li class="navbar__link third"><a href="tarifs.html">Tarifs</a></li>
+              <li class="navbar__link four"><a href="a_propos.html">A propos</a></li>
+              <li class="navbar__link fifth"><a href="contact.html">Contact</a></li>
+            </ul>   
+            <button class="burger">
+              <span class="bar"></span>  
+            </button>   
+          </nav>
+        <div class="cover">
+          <h1 class="title">Relax’Sens</h1>
+          <a href="tel:+33358420899" class="cta">Nous contacter</a>
+        </div>
+
+
+    </header>
+    <main>
+        <section class="menu">
+            <h2>Qui sommes nous ?</h2>
+            <div class="presentation">
+                <div class="presentation-img"></div>
+                <p>Nous sommes Angélique et Gaëlle, et nous sommes fières de vous présenter notre institut que l'on a créé ensemble en 2014.</br></br>
+                  
+                Notre priorité : vous satisfaire vous, nos clientes, au mieux, en étant à votre écoute. Nous essayons au jour le jour de vous apporter un moment de détente et de relaxation dans un lieu cocooning. Le tout afin de vous apporter tout le bien-être dont vous avez besoin.</br></br>
+                
+                Avant d'ouvrir cet Institut Gaëlle travaillait dans le milieu du SPA et Angélique dans un Institut. Notre mixité est notre force pour vous proposer des prestations variées et de qualité.</br></br>
+
+                Depuis juin 2021, notre petite équipe s'est agrandie avec l'arrivée de Sharon.</br></br>
+
+                Toute l'équipe a donc hâte de vous recevoir à l'Institut pour faire vivre une expérience remplie de détente, de bonne humeur et de relaxation.
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer_logo-box">
+              <div class="footer_logo"></div>
+          </div>
+            <div class="footer_adress-box">
+              <div class="footer_adress">
+                <h2>RELAX'SENS</h2>
+                <p>Espace commercial “Les Donjons”</br>
+                  Galerie Centre E.LECLERC</br>
+                  71160 DIGOIN</p>
+              </div>
+            </div>
+            <div class="footer_contact">
+                <h2>CONTACT</h2>
+                <a href="tel:+33358420899" class="footer_contact-tel">
+                    <div class="contact-tel-img"></div>
+                    <p>03 58 42 08 99</p>
+                </a>
+                <a href="mailto:
+                relaxsens.sarl@sfr.fr" class="footer_contact-mail">
+                    <div class="contact-mail-img"></div>
+                    <p>relaxsens.sarl@sfr.fr</p>
+                </a>
+            </div>
+            <div class="footer_mentions-box">
+              <div class="footer_mentions">
+                <a href="mentions.html">MENTIONS LÉGALES</a>
+              </div>  
+            </div>
+        </div>
+
+    </footer>
+    <script defer>
+      function toggleMenu () {  
+        const navbar = document.querySelector('.navbar');
+        const burger = document.querySelector('.burger');
+        burger.addEventListener('click', (e) => {    
+        navbar.classList.toggle('show-nav');
+        });    
+      }
+      toggleMenu();
+    </script>
+</body>
+</html>

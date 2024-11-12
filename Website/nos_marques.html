@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="Clément Lazzarini">
+
+  <title>Relax'Sens - Nos marques</title>
+  <meta name="description" content="Relax'Sens - Institut de beauté Digoin - Nos marques">
+  <link rel="icon" href="img/makeup-pouch.png">
+</head>
+
+<body>
+    <header>
+      <nav class="navbar dark-mode" role="navigation">
+        <a href="index.html"  class="navbar__logo"><div></div></a>    
+        <ul class="navbar__links">
+          <li class="navbar__link first"><a href="index.html">Accueil</a></li>
+          <li class="navbar__link second"><a href="nos_marques.html">Nos marques</a></li>
+          <li class="navbar__link third"><a href="tarifs.html">Tarifs</a></li>
+          <li class="navbar__link four"><a href="a_propos.html">A propos</a></li>
+          <li class="navbar__link fifth"><a href="contact.html">Contact</a></li>
+        </ul>   
+        <button class="burger">
+          <span class="bar"></span>  
+        </button>   
+      </nav>
+        <div class="cover">
+          <h1 class="title">Relax’Sens</h1>
+          <a href="tel:+33358420899" class="cta">Nous contacter</a>
+        </div>
+
+
+    </header>
+    <main>
+        <section class="menu">
+            <h2>Nos marques</h2>
+            <div class="menu_marques">
+
+              <div class="marques_left-img "></div>
+              <div class="marques-desc ">
+                <h3>MASTERS COLORS</h3>
+                <p>Masters Colors a été créé en 2001 et est une marque de maquillage française. Elle est distribuée exclusivement en institut de beauté.<br><br>
+
+                Masters Colors élabore la plupart de ses produits en France avec l'exigence et la rigueur des normes pharmaceutiques.<br><br>
+
+                C'est une marque de "maquillage-soin".<br><br>
+
+                Profitant de l'expertise "GUINOT - MARY COHR", Masters Colors enrichit chacun de ses produits de maquillage en actifs soin jeunesse à l'efficacité prouvée et propose des teintes adaptées à tous les types de peaux, toutes les saisons, toutes les lumières.<br><br>
+
+                Conseillés par des esthéticiennes, les produits  Masters Colors sont parfaitement adaptés aux besoins des consommatrices soulignant ainsi la beauté de leur visage : car la mode, c'est bien, mais la beauté, c'est mieux !!!</p>
+                </div>
+
+              <div class="marques-desc">
+                <h3>GUINOT</h3>
+                <p><span class="italic">Huiles essentielles : Un antidote naturel</span><br>
+                  Au coeur de nos produits, nous utilisons des huiles essentielles, reconnues scientifiquement pour leur puissantes propriétés cutanées.<br><br>  
+                  
+                  <span class="italic">Qualité Pharmaceutique:</span><br>
+                  Chacune de nos huiles essentielles proviennent des meilleurs terroir du monde et est contrôlés afin de garantir sa pureté, ses propriétés botaniques et biochimiques.<br><br>  
+                  
+                  <span class="italic">Naturalité maximale :</span><br> 
+                  Nous nous engageons à utiliser autant d’ingrédients naturels dans toutes nos formules, tout en garantissant une sensorialité exceptionnelle.<br>
+                  </p>
+              </div>
+              <div class="marques_right-img"></div>
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer_logo-box">
+              <div class="footer_logo"></div>
+          </div>
+            <div class="footer_adress-box">
+              <div class="footer_adress">
+                <h2>RELAX'SENS</h2>
+                <p>Espace commercial “Les Donjons”</br>
+                  Galerie Centre E.LECLERC</br>
+                  71160 DIGOIN</p>
+              </div>
+            </div>
+            <div class="footer_contact">
+                <h2>CONTACT</h2>
+                <a href="tel:+33358420899" class="footer_contact-tel">
+                    <div class="contact-tel-img"></div>
+                    <p>03 58 42 08 99</p>
+                </a>
+                <a href="mailto:
+                relaxsens.sarl@sfr.fr" class="footer_contact-mail">
+                    <div class="contact-mail-img"></div>
+                    <p>relaxsens.sarl@sfr.fr</p>
+                </a>
+            </div>
+            <div class="footer_mentions-box">
+              <div class="footer_mentions">
+                <a href="mentions.html">MENTIONS LÉGALES</a>
+              </div>  
+            </div>
+        </div>
+
+    </footer>
+    <script defer>
+      function toggleMenu () {  
+        const navbar = document.querySelector('.navbar');
+        const burger = document.querySelector('.burger');
+        burger.addEventListener('click', (e) => {    
+        navbar.classList.toggle('show-nav');
+        });    
+      }
+      toggleMenu();
+    </script>
+</body>
+</html>

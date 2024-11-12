@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="Clément Lazzarini">
+
+  <title>Relax'Sens - Contact</title>
+  <meta name="description" content="Relax'Sens - Institut de beauté Digoin - Contact">
+  <link rel="icon" href="img/makeup-pouch.png">
+</head>
+
+<body>
+    <header>
+      <nav class="navbar dark-mode" role="navigation">
+        <a href="index.html"  class="navbar__logo"><div></div>  </a>  
+        <ul class="navbar__links">
+          <li class="navbar__link first"><a href="index.html">Accueil</a></li>
+          <li class="navbar__link second"><a href="nos_marques.html">Nos marques</a></li>
+          <li class="navbar__link third"><a href="tarifs.html">Tarifs</a></li>
+          <li class="navbar__link four"><a href="a_propos.html">A propos</a></li>
+          <li class="navbar__link fifth"><a href="contact.html">Contact</a></li>
+        </ul>   
+        <button class="burger">
+          <span class="bar"></span>  
+        </button>   
+      </nav>
+        <div class="cover">
+          <h1 class="title">Relax’Sens</h1>
+          <a href="tel:+33358420899" class="cta">Nous contacter</a>
+        </div>
+
+
+    </header>
+    <main>
+      <div class="menu menu-contact">
+        <h2>Où nous trouver ?</h2>
+        <div class="trouver">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2746.9639740721773!2d3.9903686155920566!3d46.489025779126365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f3df0052fcd7bf%3A0x9781a9cfa206492c!2sInstitut%20Relax&#39;Sens!5e0!3m2!1sfr!2sfr!4v1640278042064!5m2!1sfr!2sfr"  class="map" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <div class="trouver-desc">
+              <h3>Relax’Sens</h3>
+              <p>Espace Commercial Les Donjons</br>
+                Galerie Centre E.LECLERC</br>
+                71160 DIGOIN</p>
+              <a href="tel:+33358420899" class="cta_offer">03 58 42 08 99 </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu menu-contact">
+        <h2>Nos horaires d'ouvertures</h2>
+        <div class="contacter">
+          <div class="contacter-desc">
+              <ul class="horaires">
+                <li>Lundi : <span class="price">10h00 à 19h00</span></li>
+                <li>Mardi : <span class="price">09h00 à 19h00</span></li>
+                <li>Mercredi : <span class="price">09h00 à 19h00</span></li>
+                <li>Jeudi : <span class="price">09h00 à 19h00</span></li>
+                <li>Vendredi : <span class="price">09h00 à 19h00</span></li>
+                <li>Samedi : <span class="price">09h00 à 17h00</span></li>
+                <li>Dimanche : <span class="price">un peu de repos..!</span></li>
+              </ul>
+          </div>
+          <div class="contacter-img"></div>
+        </div>
+        <div class="contact-social">
+          <p>Suivez nous sur les réseaux sociaux !</p>
+          <div class="social-link">
+            <a href="tel:+33358420899"><div class="social-tel"></div></a>
+            <a href="mailto:relaxsens.sarl@sfr.fr"><div class="social-mail"></div></a>
+            <a href="https://www.facebook.com/people/Relaxsens-Digoin/100007321337107/" target="blank"><div class="social-fb"></div></a>
+            <a href="https://instagram.com/relaxsensdigoin?utm_medium=copy_link" target="blank"><div class="social-insta"></div></a>
+          </div>
+        </div>
+      </div>
+
+      <p class="message">ON A HÂTE DE VOUS (RE)VOIR !</p>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer_logo-box">
+              <div class="footer_logo"></div>
+          </div>
+            <div class="footer_adress-box">
+              <div class="footer_adress">
+                <h2>RELAX'SENS</h2>
+                <p>Espace commercial “Les Donjons”</br>
+                  Galerie Centre E.LECLERC</br>
+                  71160 DIGOIN</p>
+              </div>
+            </div>
+            <div class="footer_contact">
+                <h2>CONTACT</h2>
+                <a href="tel:+33358420899" class="footer_contact-tel">
+                    <div class="contact-tel-img"></div>
+                    <p>03 58 42 08 99</p>
+                </a>
+                <a href="mailto:
+                relaxsens.sarl@sfr.fr" class="footer_contact-mail">
+                    <div class="contact-mail-img"></div>
+                    <p>relaxsens.sarl@sfr.fr</p>
+                </a>
+            </div>
+            <div class="footer_mentions-box">
+              <div class="footer_mentions">
+                <a href="mentions.html">MENTIONS LÉGALES</a>
+              </div>  
+            </div>
+        </div>
+
+    </footer>
+    <script defer>
+      function toggleMenu () {  
+        const navbar = document.querySelector('.navbar');
+        const burger = document.querySelector('.burger');
+        burger.addEventListener('click', (e) => {    
+        navbar.classList.toggle('show-nav');
+        });    
+      }
+      toggleMenu();
+    </script>
+</body>
+</html>
