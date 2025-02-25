@@ -33,24 +33,45 @@
 
     </header>
     <main>
-      <div class="offer" style="text-align: center;">
-        <p>🛠️ L’Institut fait peau neuve ! 🛠️<br><br>
-
-          Pour mieux vous accueillir, notre institut sera fermé du 1er au 26 janvier inclus pour travaux 🚧. Nous avons hâte de vous retrouver dans un espace rénové et encore plus agréable dès le 27 janvier 🌟 !<br><br>
-          
-          Merci de votre compréhension et à très bientôt 💆‍♀️✨</p>
-      </div>
-        <div class="offer">
-            <img class="offer_img" src="img/actual-offer.jpg" alt="Offre décembre 2024" style=" width: 14rem; height: 18rem;">
-            <div class="offer_desc">
-                <h2>En ce moment</h2>
-                <p></p>
-                <p>✨ Calendrier de l’Avent "Fêtes en Beauté" de Guinot ✨<br><br>
-
-                  24 surprises pour se chouchouter avant Noël 🎄 ! Soins visage et corps, maquillage... chaque jour un nouveau bonheur beauté 💖. Offrez-vous ou partagez ce moment magique ! 🎁💆‍♀️<br><br></p>
-                <a href="nos_marques.html" class="cta_offer">Découvrir nos marques</a>
+      <div class="carousel">
+        <div class="carousel_inner">
+            <!-- Première page : Offre Guinot -->
+            <div class="carousel_item active">
+                <div class="offer">
+                    <img class="offer_img" src="img/OffreGuinot022025.jpeg" alt="Offre Février 2025" style="width: 18rem; height: 18rem;">
+                    <div class="offer_desc">
+                        <h2>En ce moment</h2>
+                        <p>✨ Offrez à votre peau l’éclat qu’elle mérite avec Guinot ✨<br><br>
+                        Pour l’achat d’un masque Guinot, profitez de votre gommage à -50% ✨ ! Une occasion parfaite pour sublimer votre routine beauté et révéler un teint lumineux. Faites-vous plaisir ou offrez ce duo éclatant 🎁💆‍♀️<br><br></p>
+                        <a href="nos_marques.html" class="cta_offer">Découvrir nos marques</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Deuxième page : Images uniquement -->
+            <div class="carousel_item">
+              <div class="offer" style="justify-content: center;">
+                  <div class="image_gallery">
+                    <h2 style="text-align: center;font-size: 1.8rem;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-family: 'Antic Didone', serif;">Notre Institut a fait peau neuve ! ✨</h2>
+                    <div class="gallery_container">
+                      <img src="img/newinstitut1.jpeg" alt="Image 1" class="gallery_img">
+                      <img src="img/newinstitut2.jpeg" alt="Image 2" class="gallery_img">
+                      <img src="img/newinstitut3.jpeg" alt="Image 3" class="gallery_img">
+                    </div>
+                </div>
+              </div>
             </div>
         </div>
+    
+        <!-- Boutons de navigation -->
+        <button class="carousel_btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel_btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
         <section class="menu">
             <h2>Nos prestations</h2>
             <div class="menu_grid">
@@ -167,6 +188,15 @@
         });    
       }
       toggleMenu();
+
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(".carousel_item");
+
+      function moveSlide(step) {
+          slides[currentIndex].classList.remove("active");
+          currentIndex = (currentIndex + step + slides.length) % slides.length;
+          slides[currentIndex].classList.add("active");
+      }
     </script>
 </body>
 </html>
