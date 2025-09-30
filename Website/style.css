@@ -1,0 +1,1451 @@
+/*-----------------------------------
+Author: Clément Lazzarini
+Contact: clement.lazzarini71@gmail.com
+Description: CSS du site de l'institut de beauté Relax'Sens situé 71160 DIGOIN.
+Work Time: 30h
+Date: 12/21 -> 01/22
+------------------------------------*/
+
+/*-----------------------------------
+            Add Fonts
+------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+
+
+/*-----------------------------------
+        General Properties
+------------------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+body{
+    background-color: #FFFFFF;
+}
+
+
+.light-mode {
+    --navbar-color: #000;
+    --navbar-bg-color: #FFD7ED;  
+}
+.dark-mode {
+    --navbar-color: #000;
+    --navbar-bg-color: #FFD7ED;  
+  }
+  
+
+/*-----------------------------------
+                Header
+------------------------------------*/
+.navbar {  
+    display:flex;
+    align-items:center; 
+    justify-content:space-between;   
+    padding:1rem;
+    font-size:1.1rem;
+    background:var(--navbar-bg-color);
+    color:var(--navbar-color);
+    height: 4rem;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.navbar__logo{
+    background: url('img/logo.png') no-repeat center center / contain;
+    width: 8rem;
+    height: 4rem;
+}
+.navbar__links { 
+    display:flex;  
+}
+.navbar__link { 
+    padding:0 1rem;
+}
+.navbar__link > a { 
+    color:var(--navbar-color);
+    text-decoration:none;
+}
+.navbar__link:hover{
+    color: #E72E93;
+}
+.burger {
+    display:none;
+}
+
+.cover{
+    background: url('img/cover.jpg') no-repeat center center / cover;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.title{
+    font-family: 'Gwendolyn', sans-serif;
+    text-align: center;
+    font-size: 6rem;
+    padding-top: 4rem;
+    color: white;
+    text-shadow: 1px 1px 2px black, 1px 1px 1rem black, 0 0 0.2em black;
+}
+
+.cta{
+    background-color: #FFD7ED;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    width: 15%;
+    text-align: center;
+    margin-top: 1rem;
+    transition: 200ms;
+}
+.cta:hover{
+    transform: scale(1.1);
+    background-color: #E72E93;
+}
+
+/*-----------------------------------
+                Main Accueil
+------------------------------------*/
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.offer, .menu{
+    background-color: #FEEEF6;
+    border-radius: 30px;
+    margin-top: 4rem;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.offer{
+    display: flex;
+    padding: 2rem;
+    height: 24rem;
+}
+.offer_img{
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    height: 12rem;
+    border-radius: 30px;
+    box-shadow: #00000060 0px 7px 29px 0px;
+}
+.offer_desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+.offer_desc h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Antic Didone', serif;
+}
+.offer_desc p{
+    margin-top: -2rem;
+}
+.cta_offer{
+    background-color: #FFD7ED;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    width: 18rem;
+    text-align: center;
+    transition: 200ms;
+}
+.cta_offer:hover{
+    background-color: #E72E93;
+}
+
+
+.menu{
+    padding: 0 4rem 6rem;;
+}
+.menu_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 5rem;
+    column-gap: 2rem;
+    margin: auto;
+}
+.menu h2{
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding: 2rem 0 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Antic Didone', serif;
+}
+.modelage{
+    background: url('img/main_massage.jpg') no-repeat center center / cover;
+}
+.visage{
+    background: url('img/main_visage.jpg') no-repeat center center / cover;
+}
+.mains{
+    background: url('img/main_main.jpg') no-repeat center center / cover;
+}
+.maquillage{
+    background: url('img/main_maquillage.jpg') no-repeat center center / cover;
+}
+.epilation{
+    background: url('img/main_epilation.jpg') no-repeat center center / cover;
+}
+.gift{
+    background: url('img/main_gift.jpg') no-repeat center center / cover;
+}
+
+
+.card {
+    position: relative;
+    display: block;
+    height: 20rem;  
+    width: 80%;
+    overflow: hidden;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: auto;
+    box-shadow: #00000060  0px 7px 29px 0px;
+}
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    background-color: #FFFFFF;     
+    transform: translateY(100%);
+    transition: .3s ease-in-out;
+}
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}  
+.card__header-text{
+    margin: 0 auto;
+    color: black;
+}
+.card:hover .card__header {
+    transform: translateY(0);
+}
+.card__title {
+    font-weight: 300;
+    margin: 0 auto 0;
+    color: black;
+}
+.card__description {
+    padding: 0 2rem 2rem;
+    margin: 0;
+    color: black;  
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+.card p{
+    font-size: 0.8rem;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel_inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel_item {
+    min-width: 100%;
+    display: none;
+}
+
+.carousel_item.active {
+    display: block;
+}
+
+.image_gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery_img {
+    width: 16rem;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel_btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(231, 121, 239, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius:10rem;
+}
+
+.carousel_btn.prev {
+    left: 5px;
+}
+
+.carousel_btn.next {
+    right: 5px;
+}
+
+.carousel_btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*-----------------------------------
+                Main Marques
+------------------------------------*/
+.menu_marques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 8rem;
+    column-gap: 4rem;
+    text-align: justify;
+}
+
+.menu_marques h3{
+    font-family: 'Antic Didone', serif;
+}
+
+.marques_left-img{
+    background: url('img/master-colors.jpeg') no-repeat center center / cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+.marques_right-img{
+    background: url('img//guinot2.jpeg') no-repeat center center / cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+.marques_left-desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.marques-desc h3{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.italic{
+    font-weight: 400;
+    
+}
+
+/*-----------------------------------
+                Main Tarifs
+------------------------------------*/
+.menu_tarifs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gauche, .droite{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.gauche-img, .droite-img, .tarif-epilation{
+    border-radius: 50%;
+    height: 14rem;
+    width: 14rem;
+}
+
+.tarif-epilation{
+    background: url('img/tarif-epilations.jpg') no-repeat center center / cover; 
+}
+.tarif-forfait-epi{
+    background: url('img/tarif-forfait-epi.jpg') no-repeat center center / cover; 
+}
+.tarif-maquillage{
+    background: url('img/tarif-yeux.jpg') no-repeat center center / cover; 
+}
+.tarif-type{
+    background: url('img/tarif-type.jpg') no-repeat center center / cover; 
+}
+.tarif-antiage{
+    background: url('img/tarif-antiage.jpg') no-repeat center center / cover; 
+}
+.tarif-yeux{
+    background: url('img/main_maquillage.jpg') no-repeat center center / cover; 
+}
+.tarif-visage{
+    background: url('img/tarif-visage-nettoyant.jpg') no-repeat center center / cover; 
+}
+.tarif-visage-eva{
+    background: url('img/tarif-visage-eva.jpg') no-repeat center center / cover; 
+}
+.tarif-visage-type{
+    background: url('img/tarif-type.jpg') no-repeat center center / cover; 
+}
+
+.tarif-visage-guinot{
+    background: url('img/guinot1.jpeg') no-repeat center center / cover; 
+}
+.tarif-corps-eva{
+    background: url('img/tarif-corps-eva.jpg') no-repeat center center / cover; 
+}
+.tarif-modelage{
+    background: url('img/tarif-modelage.jpg') no-repeat center center / cover; 
+}
+.tarif-corps{
+    background: url('img/modelage.jpg') no-repeat center center / cover; 
+}
+.tarif-main{
+    background: url('img/main_main.jpg') no-repeat center center / cover; 
+}
+
+.gauche-desc, .droite-desc{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    width: 40rem;
+}
+.modelage-desc{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    width: 46rem;
+}
+.epilation-desc{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    width: 43rem;
+}
+
+.menu_tarifs h3{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Antic Didone', serif;
+}
+
+
+.liste, .liste-solo{
+    display: flex;
+    width: 100%;
+    background-color: #FFFFFF90;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.liste ul{
+    padding: 0 2rem;
+    width: 50%;
+}
+.liste-solo ul{
+    padding: 1rem 2rem;
+}
+
+.liste ul:first-child{
+    border-right: black 1px solid;
+}
+.liste li, .liste-solo li{
+    margin-bottom: 0.4rem;
+}
+.liste li:hover, .liste-solo li:hover{
+    color: #E72E93;
+    cursor: default;
+}
+.price{
+    font-weight: 400;
+}
+.secondaire{
+    font-style: italic;
+}
+
+
+/*-----------------------------------
+                Main Présentations
+------------------------------------*/
+.presentation{
+    display: flex;
+    flex-direction: column;
+}
+.presentation-img{
+    background: url('img/presentation.jpeg') no-repeat center center / cover;
+    width: 100%;
+    height: 30rem;
+    border-radius: 30px;
+    margin-bottom: 4rem;
+}
+.presentation p{
+    text-align: justify;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/*-----------------------------------
+                Main Contact
+------------------------------------*/
+.trouver{
+    display: flex;
+}
+.trouver-desc{
+    padding-left: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.trouver-desc h3{
+    font-family: 'Antic Didone', serif;
+    font-size: 2.5rem;
+}
+.trouver-desc p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contacter{
+    display: flex;
+    justify-content: space-around;
+}
+.contacter-img{
+    background: url('img/contact-open.jpg') no-repeat center center / cover;
+    width: 30rem;
+    height: 15rem;
+    border-radius: 30px;
+}
+.contacter-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.horaires li{
+    padding: 0.3rem;
+}
+.horaires li:hover{
+    color: #E72E93;
+}
+
+.contact-social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-social p{
+    text-align: center;
+    font-family: 'Antic Didone', serif;
+    font-size: 1.5rem;
+    padding-top: 4rem;
+}
+.social-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    padding-top: 1.5rem;
+}
+.social-tel{
+    background: url('img/phone.png') no-repeat center center / cover;
+    width: 2rem;
+    height: 2rem;
+}
+.social-mail{
+    background: url('img/email.png') no-repeat center center / cover;
+    width: 2rem;
+    height: 2rem;
+}
+.social-fb{
+    background: url('img/facebook.png') no-repeat center center / cover;
+    width: 2rem;
+    height: 2rem;
+}
+.social-insta{
+    background: url('img/instagram.png') no-repeat center center / cover;
+    width: 2rem;
+    height: 2rem;
+}
+
+.message{
+    text-align: center;
+    font-family: 'Antic Didone', serif;
+    font-size: 2rem;
+    padding-top: 6rem;
+}
+
+.map{
+    width: 60%;
+    height: 20rem;
+}
+
+/*-----------------------------------
+                Mentions Légales
+------------------------------------*/
+.mentions h3{
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.mentions p{
+    text-align: justify;
+    padding-bottom: 2rem;
+}
+
+/*-----------------------------------
+                Footer
+------------------------------------*/
+footer{
+    margin-top: 8rem;
+    background-color:#FFD7ED;
+    box-shadow: inset 0px 20px 15px -5px #FFFFFF;
+    font-weight: 300;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 4rem 0;
+}
+
+.footer_logo-box{
+    border-right: 2px solid grey;
+}
+.footer_logo{
+    width: 10rem;
+    height: 5rem;
+    background: url('img/logo.png') no-repeat center center / contain;
+    margin: auto;
+    text-align: center;
+}
+
+.footer_adress-box{
+    border-right: 2px solid grey;
+}
+.footer_adress{
+    margin: auto;
+}
+.footer_adress p{
+    text-align: center;
+}
+
+.footer_contact{
+    margin: auto;
+}
+.footer_contact h2, .footer_adress h2, .footer_mentions a{
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Antic Didone', serif;
+}
+
+.footer_contact-tel{
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+.contact-tel-img{
+    background: url('img/phone.png') no-repeat center center / cover;
+    height: 1rem;
+    width: 1rem;
+}
+.footer_contact-tel p{
+    margin-left: 1rem;
+    transition: 200ms;
+}
+
+.footer_contact-mail{
+    display: flex;
+}
+.contact-mail-img{
+    background: url('img/email.png') no-repeat center center / cover;
+    height: 1rem;
+    width: 1rem;
+}
+.footer_contact-mail p{
+    margin-left: 1rem;
+    transition: 200ms;
+}
+
+.footer_contact-mail p:hover, .footer_contact-tel p:hover{
+    color: #E72E93;
+}
+
+.footer_mentions-box{
+    border-left: 2px solid grey;
+}
+.footer_mentions{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.footer_mentions a:hover{
+    color: #E72E93;
+}
+
+/*-----------------------------------
+            Media Queries
+------------------------------------*/
+@media all and (max-width:768px) {
+    .navbar__links { 
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      width:0;
+      height:calc(100vh - 65px);  
+      position:absolute;
+      top:4rem;
+      right:0;     
+      background:var(--navbar-bg-color);     
+      transform: translateX(110%);
+      transition: all .5s ease-in-out;
+    }
+    .show-nav .navbar__links { 
+      width:100%;    
+      transform: translateX(0);
+    } 
+    .navbar__link {    
+      transform: translateX(101%);
+      transition: all .5s ease-in-out;
+    }
+    .show-nav .navbar__link  {        
+      transform: translateX(0);    
+    }   
+    .navbar__link > a {
+      display:block;
+      padding:1rem;
+      font-size:1.6rem;
+      color:var(--navbar-color);  
+      transition: all .4s ease-in-out;
+    }
+    .navbar__link > a:hover {
+      padding-left:2rem;
+      letter-spacing:5px;
+    }
+    
+    /* Toggle menu */
+    .burger {
+      display:block;
+      position:relative;
+      padding:0;
+      width:45px;
+      height:45px;
+      border:none;
+      background:transparent;
+      cursor:pointer;
+    }
+    .bar {
+      display:block;    
+      width:40px;
+      height:2px;  
+      border-radius:3px;
+      background:var(--navbar-color); 
+      transition: all .5s ease-in-out;   
+    }
+    .bar::before, .bar::after {
+      content:"";
+      width:40px;
+      height:2px;
+      position:absolute; 
+      left:0;  
+      background:var(--navbar-color); 
+      border-radius:3px;    
+      transition: all .5s ease-in-out;
+    }
+    .bar::before {
+      transform:translateY(-12px)
+    }
+    .bar::after {
+      transform:translateY(12px)
+    }
+    .show-nav .bar {
+      width:0;
+      background:transparent;    
+    }
+    .show-nav .bar::before {
+      transform:rotate(45deg);
+    }
+    .show-nav .bar::after {
+      transform:rotate(-45deg);
+    }
+    
+    /* Animations */
+    .show-nav .first {      
+      transition: all 1s ease-out;
+    } 
+    .show-nav .second {      
+      transition: all 1.1s ease-out;
+    } 
+    .show-nav .third {      
+      transition: all 1.2s ease-out;
+    } 
+    .show-nav .four {      
+      transition: all 1.3s ease-out;
+    } 
+    .show-nav .fifth {      
+      transition: all 1.4s ease-out;
+    }
+  }
+  
+  /*  Medium device - Bonus */
+  @media screen and (min-width:768px) {
+    .navbar__link > a::after {
+      display:block;
+      content:"";
+      width:0;
+      height:1px;
+      background:var(--navbar-color);
+      transition: width .4s;
+    }
+    .navbar__link:hover > a::after {
+      width:100%;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 425px) { 
+
+    
+    .cover{
+        height: 20rem;
+    }
+    .title{
+        font-size: 5rem;
+        padding-top: 4rem;
+    }
+    .cta{
+        width: 50%;
+    }
+    main{
+        width: 100%;
+    }
+
+    .offer, .menu{
+        background-color: #FFFFFF;
+        border-radius: 0;
+        margin-top: 0;
+        margin-bottom: 4rem;
+        box-shadow: none;
+    }
+    .offer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 1rem 2rem;
+    }
+    
+    .offer_img{
+        height: 16rem;
+        padding: 0;
+        margin-bottom: 1rem;
+        border-radius: 30px;
+    }
+
+    .offer_desc{
+        padding: 0;
+    }
+    .offer_desc h2{
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: 'Antic Didone', serif;
+        text-align: center;
+    }
+    .offer_desc p{
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .cta_offer{
+        margin: 0 auto;
+    }
+    .carousel_btn {
+        transform: translateY(5rem);
+    }
+
+    .gallery_img:nth-of-type(2),
+    .gallery_img:nth-of-type(3) {
+        display: none;
+    }
+
+    .gallery_container{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .menu{
+        padding: 0 1rem 6rem;;
+    }
+    .menu_grid{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        row-gap: 2rem;
+        column-gap: 0;
+    }
+    .menu h2{
+        padding: 2rem 0 3rem;
+    }
+    .card {
+        width: 90%;
+    }
+    
+
+    footer{
+        margin-top: 0;
+        font-weight: 400;
+    }
+    .footer{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2rem;
+    }
+    .footer_logo{
+        width: 45%;
+        height: 5rem;
+        background: url('img/logo.png') no-repeat center center / contain;
+        margin: auto;
+        text-align: center;
+    }
+    .footer_logo-box{
+        border-right: 0;
+    }
+    .footer_adress-box{
+        border-right: 0;
+    }
+    .footer_mentions-box{
+        border-left: 0;
+    }
+
+
+    .menu_marques{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
+        row-gap: 3rem;
+        column-gap: 0rem;
+        margin-bottom: -6rem;
+    }
+    .marques_right-img{
+        grid-row: 3;
+    }
+
+
+    .presentation{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .presentation-img{
+        background: url('img/presentation.jpeg') no-repeat center center / cover;
+        width: 100%;
+        height: 14rem;
+        margin-bottom: 2rem;
+    }
+
+
+
+    .menu_tarifs{
+        margin: 0 1rem;
+        margin-bottom: -4rem;
+    }
+    .menu_tarifs h3{
+        margin: 0 auto;
+        font-size: 1.4rem;
+        font-weight: 400;
+        background-color: #FFD7ED;
+        padding: 1rem 0;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .gauche, .droite{
+        flex-direction: column;
+        margin-bottom: 4rem;
+        width: 100%;
+        background-color: #FEEEF6;
+        border-radius: 30px;
+    }
+    .gauche-img, .droite-img, .tarif-epilation{
+        visibility: hidden;
+        height: 0;
+    }
+    .gauche-desc, .droite-desc, .epilation-desc, .modelage-desc{
+        width: 100%;
+        padding: 0;
+    }
+    .modelage-desc, .epilation-desc{
+        width: 100%;
+    }
+    
+    .liste, .liste-solo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #FEEEF6;
+        padding: 0;
+        border-radius: 30px;
+    }
+    .liste ul{
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+    .liste-solo ul{
+        padding: 1rem 1rem;
+    }
+    .liste ul:first-child{
+        border-right: none;
+    }
+    .liste li, .liste-solo li{
+        margin-bottom: 0.4rem;
+        line-height: 180%;
+        border-bottom: 0.1px solid grey;
+    }
+    .liste li:last-child, .liste-solo li:last-child{
+        border-bottom: none;
+    }
+    .liste li:hover, .liste-solo li:hover{
+        color: #E72E93;
+        cursor: default;
+    }
+
+    .delete-space{
+        margin-bottom: -2rem;
+    }
+    #border-bottom{
+        border-bottom: 0.1px solid grey;
+    }
+
+    .maqui{
+        width: 100%;
+    }
+    .price{
+        font-weight: 400;
+    }
+    
+
+
+    .trouver{
+        flex-direction: column;
+    }
+    .map{
+       width: 90%;
+       height: 16rem;
+       margin: 0 auto;
+    }
+    .trouver-desc{
+        padding: 2rem 0;
+    }
+    .trouver-desc p{
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+    .menu-contact{
+        margin-bottom: -4rem;
+    }
+    .contacter{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacter-img{
+        width: 90%;
+        height: 16rem;
+    }
+    .contacter-desc{
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    
+    .contact-social p{
+        font-size: 1.3rem;
+    }
+    .social-link{
+        width: 80%;
+        padding-top: 1.5rem;
+    }
+    
+    .message{
+        text-align: center;
+        font-family: 'Antic Didone', serif;
+        font-size: 2rem;
+        padding: 4rem 0;
+    }
+
+ }
+
+@media (min-width:1024px) and (max-width:1439.98px) {
+    .cta{
+        width: 20%;
+        text-align: center;
+    }
+
+    .menu_grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .droite-desc, .gauche-desc, .modelage-desc, .epilation-desc{
+        width: 38rem;
+    }
+    .gauche-img, .droite-img, .tarif-epilation{
+        height: 10rem;
+        width: 10rem;
+        margin-bottom: -2rem;
+    }
+    .liste, .liste-solo{
+        padding: 1rem 0;
+    }
+    .map{
+        width: 90%;
+    }
+    .contacter-img{
+        width: 20rem;
+    }
+
+    .menu_marques{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 3rem;
+        column-gap: 0rem;
+        margin-bottom: -4rem;
+    }
+    .marques_right-img{
+        grid-row: 3;
+    }
+
+    .footer{
+        grid-template-columns: 0.9fr 1fr 0.9fr 0.9fr;
+        padding: 4rem 0;
+    }
+    
+
+}
+
+
+@media (min-width:425.2px) and (max-width:1023.98px) {
+    .offer, .menu{
+        margin-bottom: 4rem;
+    }
+    .offer{
+        display: flex;
+        align-items: center;
+        padding: 3rem 1rem 2rem;
+    }
+    
+    .offer_img{
+        width: 14rem;
+        height: 14rem;
+        padding: 0;
+        margin-bottom: 1rem;
+        border-radius: 30px;
+    }
+
+    .offer_desc{
+        padding: 0 0 0 1rem;
+    }
+    .offer_desc h2{ 
+        text-align: center;
+    }
+    .offer_desc p{
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .cta_offer{
+        margin: 0 auto;
+    }
+    .carousel_btn {
+        transform: translateY(5rem);
+    }
+    .gallery_container{
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .gallery_img:nth-of-type(2),
+    .gallery_img:nth-of-type(3) {
+        display: none;
+    }
+
+    .cta{
+        width: 30%;
+        text-align: center;
+    }
+
+    .menu_grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .droite-desc, .gauche-desc, .modelage-desc, .epilation-desc{
+        width: 38rem;
+    }
+    .gauche-img, .droite-img, .tarif-epilation{
+        height: 10rem;
+        width: 10rem;
+        margin-bottom: -2rem;
+    }
+    .liste, .liste-solo{
+        padding: 1rem 0;
+    }
+    .map{
+        width: 90%;
+    }
+    .contacter-img{
+        width: 20rem;
+    }
+
+    .menu_marques{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 3rem;
+        column-gap: 0rem;
+        margin-bottom: -4rem;
+    }
+    .marques_right-img{
+        grid-row: 3;
+    }
+
+
+    footer{
+        margin-top: 0;
+        font-weight: 400;
+    }
+    .footer{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2rem;
+    }
+    .footer_logo{
+        width: 45%;
+        height: 5rem;
+        background: url('img/logo.png') no-repeat center center / contain;
+        margin: auto;
+        text-align: center;
+    }
+    .footer_logo-box{
+        border-right: 0;
+    }
+    .footer_adress-box{
+        border-right: 0;
+    }
+    .footer_mentions-box{
+        border-left: 0;
+    }
+
+    .menu_tarifs{
+        margin: 0 1rem;
+        margin-bottom: -4rem;
+    }
+    .menu_tarifs h3{
+        margin: 0 auto;
+        font-size: 1.4rem;
+        font-weight: 400;
+        background-color: #FFD7ED;
+        padding: 1rem 0;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .gauche, .droite{
+        flex-direction: column;
+        margin-bottom: 0;
+        width: 100%;
+        background-color: #FEEEF6;
+        border-radius: 30px;
+    }
+    .modelage-desc{
+        margin-bottom: -3rem;
+    }
+
+    .gauche, .droite{
+        margin-bottom: 3rem;
+    }
+    .gauche-img, .droite-img, .tarif-epilation{
+        visibility: hidden;
+        height: 0;
+    }
+    .droite-desc, .epilation-desc, .modelage-desc{
+        width: 100%;
+        padding: 0 0 4rem;
+    }
+    .gauche-desc{
+        width: 100%;
+        padding: 1rem 0 0rem;
+    }
+    .modelage-desc, .epilation-desc{
+        width: 100%;
+    }
+    
+    .liste, .liste-solo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #FEEEF6;
+        padding: 0;
+        border-radius: 30px;
+    }
+    .liste ul{
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+    .liste-solo ul{
+        padding: 1rem 1rem;
+    }
+    .liste ul:first-child{
+        border-right: none;
+    }
+    .liste li, .liste-solo li{
+        margin-bottom: 0.4rem;
+        line-height: 180%;
+        border-bottom: 0.1px solid grey;
+    }
+    .liste li:last-child, .liste-solo li:last-child{
+        border-bottom: none;
+    }
+    .liste li:hover, .liste-solo li:hover{
+        color: #E72E93;
+        cursor: default;
+    }
+
+    .delete-space{
+        margin-bottom: -2rem;
+    }
+    #border-bottom{
+        border-bottom: 0.1px solid grey;
+    }
+
+    .maqui{
+        width: 100%;
+    }
+    .price{
+        font-weight: 400;
+    }
+    
+
+    .presentation-img{
+        width: 100%;
+        height: 20rem;
+        margin: 0 auto 2rem;
+    }
+
+    .trouver{
+        flex-direction: column;
+    }
+    .map{
+       width: 90%;
+       height: 16rem;
+       margin: 0 auto;
+    }
+    .trouver-desc{
+        padding: 4rem 0 0;
+    }
+    .trouver-desc p{
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+    .menu-contact{
+        margin-bottom: 0;
+    }
+    .contacter{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacter-img{
+        width: 90%;
+        height: 16rem;
+    }
+    .contacter-desc{
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    
+    .contact-social p{
+        font-size: 1.3rem;
+    }
+    .social-link{
+        width: 80%;
+        padding-top: 1.5rem;
+    }
+    
+    .message{
+        text-align: center;
+        font-family: 'Antic Didone', serif;
+        font-size: 2rem;
+        padding: 4rem 0;
+    }
+
+    .menu-contact h2{
+        padding-bottom: 3rem;
+    }
+
+
+}
+/*-----------------------------------
+                END CSS
+------------------------------------*/
